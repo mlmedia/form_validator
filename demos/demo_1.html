@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>jQuery form validator plugin - DEMO #1</title>
+
+	<!-- css -->
+	<link type="text/css" media="all" href="../css/main.css" rel="stylesheet" />
+
+	<!-- js -->
+    <script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="../js/form_validator.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="whitebox">
+			<h1>Form validator plugin</h1>
+			<form id="my_form" action="thanks.html" method="post">
+				<div class="errors_container"><!-- displays all error messages in the form via JS --></div>
+				<div class="field_group">
+					<div class="field">
+						<label class="sr_only"><b>Text field (required)</b></label>
+						<input type="text" id="text_field" name="text_field" value="" placeholder="Text field (required)"
+						data-required-error="Text field required">
+					</div>
+				</div>
+				<div class="field_group">
+					<div class="field">
+						<label class="sr_only"><b>Text field (required)</b></label>
+						<input type="text" id="text_field_2" name="text_field_2" value="" placeholder="Text field (required)"
+						data-required-error="Here's another field required error message!">
+					</div>
+				</div>
+				<div class="field_group">
+					<div class="field">
+						<label class="sr_only"><b>Alpha-numeric field (required)</b></label>
+						<input type="text" id="alphanumeric_field" name="alphanumeric_field" value="" placeholder="Alpha-numeric field (required)"
+						data-required-error="Alpha-numeric field required">
+					</div>
+				</div>
+				<div class="field_group">
+					<div class="field">
+						<label class="sr_only"><b>Email field (required)</b></label>
+						<input type="text" id="email_field" name="email_field" value="" placeholder="Email field (required)"
+						data-required-error="Email required"
+						data-email-error="Valid email required">
+					</div>
+				</div>
+				<div class="field_group">
+					<div class="field">
+						<label class="sr_only"><b>Textarea (required)</b></label>
+						<textarea type="text" id="textarea_field" name="textarea_field" rows="5" placeholder="Textarea field"
+						data-required-error="Textarea field required"></textarea>
+					</div>
+				</div>
+				<hr>
+				<p>We may be busy but your message is important to us.  We will get back to you as soon as we can.</p>
+				<div class="field">
+					<a href="#" class="btn validate_this_form">Send message</a>
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
