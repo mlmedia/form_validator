@@ -106,7 +106,8 @@ Anywhere under the jQuery ref, add the ref to the plugin.  This can be added in 
 <!-- path to your JS folder -->
 ```
 
-###Initialize the plugin### Initialize the plugin with the selector of the parent element.
+###Initialize the plugin###
+Initialize the plugin with the selector of the parent element.
 
 ```javascript
 <script type="text/javascript">
