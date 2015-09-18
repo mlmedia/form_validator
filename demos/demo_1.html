@@ -16,33 +16,43 @@
 <body>
 	<div class="container">
 		<div class="whitebox">
-			<h1>Form validator plugin</h1>
-			<form id="my_form" action="thanks.html" method="post">
+			<div id="breadcrumbs">
+				&lt;&lt;&nbsp;<a href="../index.html" title="Accordion DEMO index">DEMO index</a>
+			</div>
+			<h1>jQuery form validator plugin - DEMO #1</h1>
+			<p>
+				Below is a demo of the jQuery form validation plugin from the public GitHub project found here: <a href="https://github.com/mlmedia/form_validator" title="jQuery form validator plugin on GitHub" target="_blank">https://github.com/mlmedia/form_validator</a>.
+			</p>
+			<p>
+				The combined CSS for all of the demos can be viewed here: <a href="../css/main.css" title="Carousel demo">http://demo.dockstreetmedia.com/form_validator/css/main.css</a>
+			</p>
+			<hr />
+			<form id="my-form" action="thanks.html" method="post">
 				<div class="errors_container"><!-- displays all error messages in the form via JS --></div>
 				<div class="field_group">
 					<div class="field">
-						<label class="sr_only"><b>Text field (required)</b></label>
+						<label class="sr_only">Text field (required)</label>
 						<input type="text" id="text_field" name="text_field" value="" placeholder="Text field (required)"
 						data-required-error="Text field required">
 					</div>
 				</div>
 				<div class="field_group">
 					<div class="field">
-						<label class="sr_only"><b>Text field (required)</b></label>
+						<label class="sr_only">Text field (required)</label>
 						<input type="text" id="text_field_2" name="text_field_2" value="" placeholder="Text field (required)"
 						data-required-error="Here's another field required error message!">
 					</div>
 				</div>
 				<div class="field_group">
 					<div class="field">
-						<label class="sr_only"><b>Alpha-numeric field (required)</b></label>
+						<label class="sr_only">Alpha-numeric field (required)</label>
 						<input type="text" id="alphanumeric_field" name="alphanumeric_field" value="" placeholder="Alpha-numeric field (required)"
 						data-required-error="Alpha-numeric field required">
 					</div>
 				</div>
 				<div class="field_group">
 					<div class="field">
-						<label class="sr_only"><b>Email field (required)</b></label>
+						<label class="sr_only">Email field (required)</label>
 						<input type="text" id="email_field" name="email_field" value="" placeholder="Email field (required)"
 						data-required-error="Email required"
 						data-email-error="Valid email required">
@@ -50,7 +60,7 @@
 				</div>
 				<div class="field_group">
 					<div class="field">
-						<label class="sr_only"><b>Textarea (required)</b></label>
+						<label class="sr_only">Textarea (required)</label>
 						<textarea type="text" id="textarea_field" name="textarea_field" rows="5" placeholder="Textarea field"
 						data-required-error="Textarea field required"></textarea>
 					</div>
@@ -58,9 +68,21 @@
 				<hr>
 				<p>We may be busy but your message is important to us.  We will get back to you as soon as we can.</p>
 				<div class="field">
-					<a href="#" class="btn validate_this_form">Send message</a>
+					<button type="submit" class="btn">Send message</button>
 				</div>
 			</form>
+			<script type="text/javascript">
+				/* define $ as jQuery just in case */
+				( function( $ )
+				{
+					/* doc ready */
+					$( function( )
+					{
+						/* init the plugin */
+						$( '#my-form' ).validate( );
+					});
+				})( jQuery );
+			</script>
 		</div>
 	</div>
 </body>

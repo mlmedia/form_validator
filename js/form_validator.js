@@ -3,12 +3,15 @@
  */
 /* define $ as jQuery just in case */
 (function($) {
-	/* doc ready */
-	$(function() {
+	/* circular carousel - my custom plugin */
+    $.fn.validate = function() {
+		/* set static vars */
+        var form = this;
 
-		$('.validate_this_form').click(function(e) {
-			var form = $(this).parents('form');
-
+		/* navigation */
+        form.submit(function(e) {
+			e.preventDefault();
+			console.log('submit');
 			/* clear the errors */
 			form.find('.errors').html('');
 			form.find('.errors_container').html('');
@@ -127,7 +130,6 @@
 			if ($.isEmptyObject(errors)) {
 				form.submit();
 			}
-			e.preventDefault();
 		});
 
 		/* check for alpha-numeric */
@@ -148,5 +150,5 @@
 			return false;
 		}
 
-	});
+	}
 })(jQuery);
