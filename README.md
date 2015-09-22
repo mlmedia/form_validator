@@ -106,7 +106,8 @@ Anywhere under the jQuery ref, add the ref to the plugin.  This can be added in 
 <!-- path to your JS folder -->
 ```
 
-###Initialize the plugin### Initialize the plugin with the selector of the parent element.
+###Initialize the plugin###
+Initialize the plugin with the selector of the parent element.
 
 ```javascript
 <script type="text/javascript">
@@ -122,7 +123,8 @@ Anywhere under the jQuery ref, add the ref to the plugin.  This can be added in 
 </script>
 ```
 
-###Style the plugin with CSS### The demo pages have some basic CSS to add some structure to the page, which can be seen here: [http://demo.dockstreetmedia.com/carousel/css/main.css](http://demo.dockstreetmedia.com/form_validator/css/main.css).  
+###Style the plugin with CSS###
+The demo pages have some basic CSS to add some structure to the page, which can be seen here: [http://demo.dockstreetmedia.com/carousel/css/main.css](http://demo.dockstreetmedia.com/form_validator/css/main.css).  
 
 You can modify or add your own CSS to match your own preferences.
 
@@ -135,6 +137,7 @@ The demos index can be viewed here:
 
 View the source to see how each form was initialized and styled.
 
-##Learn / Adopt / Fork## The entirety of the plugin is included in this repository, including the demo section.  You can easily view all of the code in order to learn more about it.  I try to use clear commenting to explain the code.
+##Learn / Adopt / Fork##
+The entirety of the plugin is included in this repository, including the demo section.  You can easily view all of the code in order to learn more about it.  I try to use clear commenting to explain the code.
 
 Also, feel free to adopt and adapt to make it your own.  If you like, fork it and send over a pull request.  Add or solve existing issues.  It is open-source, after all.
