@@ -4,18 +4,20 @@
 /* define $ as jQuery just in case */
 (function($) {
 	/* circular carousel - my custom plugin */
-    $.fn.validate = function() {
+	$.fn.validate = function() {
 		/* set static vars */
-        var form = this;
+		var form = this;
 
 		/* navigation */
-        form.submit(function(e) {
+		form.submit(function(e) {
+
+			/* prevent form submission (default response) */
 			e.preventDefault();
-			console.log('submit');
+
 			/* clear the errors */
 			form.find('.errors').html('');
-			form.find('.errors_container').html('');
-			form.find('.error_field').removeClass('error_field');
+			form.find('.error-container').html('');
+			form.find('.error-field').removeClass('error-field');
 			var errors = {};
 
 			/**
@@ -100,12 +102,12 @@
 				/* display the errors to error elements + set error classes */
 				$.each(errors, function(key, value) {
 					if (form.find('*[name=' + key + ']').length !== 0) {
-						var field_group = form.find('*[name=' + key + ']').parents('.field_group'); /* field group is used instead of field for compound fields */
-						field_group.find('.error_container').html(value);
-						field_group.addClass('error_field');
+						var field_group = form.find('*[name=' + key + ']').parents('.field-group'); /* field group is used instead of field for compound fields */
+						field_group.find('.error-container').html(value);
+						field_group.addClass('error-field');
 
-						/* displays all errors into the errors_container - if desired */
-						$('.errors_container').append(value + '<br />');
+						/* displays all errors into the error-container - if desired */
+						$('.error-container').append(value + '<br />');
 					}
 				});
 

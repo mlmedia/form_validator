@@ -15,7 +15,7 @@ Usage of this carousel plugin entails the usual process:
 
 The HTML markup must be a standard `<form>` element, which can use any ID or class for initialization.
 1. add "validate_this_form" class to the button, anchor, or other element that submits the form
-2. add the following custom attributes to the input / textarea elements:
+- add the following custom attributes to the input / textarea elements:
   - "data-required-error" - error message thrown if the field is required
   - "data-match-error" - error message thrown if a field doesn't match it's counterpart field
   - "data-match" - name attribute of the counterpart field to match
@@ -32,54 +32,54 @@ The HTML markup must be a standard `<form>` element, which can use any ID or cla
   - "data-counterpart-error" - error thrown to a counterpart field (e.g. confirm password)
   - "data-counterpart" - name attribute of the counterpart field to throw the error (e.g. password)
 
-3. error messages are thrown to "error_container" element within the respective "field_group" element and "errors" container
+- error messages are thrown to "error-container" element within the respective "field-group" element and "errors" container
 
 An example of the form markup is shown below:
 
 ```html
 <form id="my_form" action="thanks.html" method="post">
-	<div class="errors_container"><!-- displays all error messages in the form via JS --></div>
-	<div class="field_group">
-		<div class="field">
-			<label class="sr_only"><b>Text field (required)</b></label>
-			<input type="text" id="text_field" name="text_field" value="" placeholder="Text field (required)"
-			data-required-error="Text field required">
-		</div>
-	</div>
-	<div class="field_group">
-		<div class="field">
-			<label class="sr_only"><b>Text field (required)</b></label>
-			<input type="text" id="text_field_2" name="text_field_2" value="" placeholder="Text field (required)"
-			data-required-error="Here's another field required error message!">
-		</div>
-	</div>
-	<div class="field_group">
-		<div class="field">
-			<label class="sr_only"><b>Alpha-numeric field (required)</b></label>
-			<input type="text" id="alphanumeric_field" name="alphanumeric_field" value="" placeholder="Alpha-numeric field (required)"
-			data-required-error="Alpha-numeric field required">
-		</div>
-	</div>
-	<div class="field_group">
-		<div class="field">
-			<label class="sr_only"><b>Email field (required)</b></label>
-			<input type="text" id="email_field" name="email_field" value="" placeholder="Email field (required)"
-			data-required-error="Email required"
-			data-email-error="Valid email required">
-		</div>
-	</div>
-	<div class="field_group">
-		<div class="field">
-			<label class="sr_only"><b>Textarea (required)</b></label>
-			<textarea type="text" id="textarea_field" name="textarea_field" rows="5" placeholder="Textarea field"
-			data-required-error="Textarea field required"></textarea>
-		</div>
-	</div>
-	<hr>
-	<p>We may be busy but your message is important to us.  We will get back to you as soon as we can.</p>
-	<div class="field">
-		<a href="#" class="btn validate_this_form">Send message</a>
-	</div>
+    <div class="error-container"><!-- displays all error messages in the form via JS --></div>
+    <div class="field-group">
+        <div class="field">
+            <label>Text field (required)</label>
+            <input type="text" name="text_field" value="" placeholder="Text field (required)"
+            data-required-error="Text field required">
+        </div>
+    </div>
+    <div class="field-group">
+        <div class="field">
+            <label>Text field (required)</label>
+            <input type="text" name="text_field_2" value="" placeholder="Text field (required)"
+            data-required-error="Here's another field required error message!">
+        </div>
+    </div>
+    <div class="field-group">
+        <div class="field">
+            <label>Alpha-numeric field (required)</label>
+            <input type="text" name="alphanumeric_field" value="" placeholder="Alpha-numeric field (required)"
+            data-required-error="Alpha-numeric field required">
+        </div>
+    </div>
+    <div class="field-group">
+        <div class="field">
+            <label>Email field (required)</label>
+            <input type="text" name="email_field" value="" placeholder="Email field (required)"
+            data-required-error="Email required"
+            data-email-error="Valid email required">
+        </div>
+    </div>
+    <div class="field-group">
+        <div class="field">
+            <label>Textarea (required)</label>
+            <textarea type="text" name="textarea_field" rows="5" placeholder="Textarea field"
+            data-required-error="Textarea field required"></textarea>
+        </div>
+    </div>
+    <hr>
+    <p>We may be busy but your message is important to us.  We will get back to you as soon as we can.</p>
+    <div class="field">
+        <a href="#" class="btn">Send message</a>
+    </div>
 </form>
 ```
 
@@ -106,8 +106,7 @@ Anywhere under the jQuery ref, add the ref to the plugin.  This can be added in 
 <!-- path to your JS folder -->
 ```
 
-###Initialize the plugin###
-Initialize the plugin with the selector of the parent element.
+###Initialize the plugin### Initialize the plugin with the selector of the parent element.
 
 ```javascript
 <script type="text/javascript">
@@ -123,8 +122,7 @@ Initialize the plugin with the selector of the parent element.
 </script>
 ```
 
-###Style the plugin with CSS###
-The demo pages have some basic CSS to add some structure to the page, which can be seen here: [http://demo.dockstreetmedia.com/carousel/css/main.css](http://demo.dockstreetmedia.com/form_validator/css/main.css).  
+###Style the plugin with CSS### The demo pages have some basic CSS to add some structure to the page, which can be seen here: [http://demo.dockstreetmedia.com/carousel/css/main.css](http://demo.dockstreetmedia.com/form_validator/css/main.css).  
 
 You can modify or add your own CSS to match your own preferences.
 
@@ -137,7 +135,6 @@ The demos index can be viewed here:
 
 View the source to see how each form was initialized and styled.
 
-##Learn / Adopt / Fork##
-The entirety of the plugin is included in this repository, including the demo section.  You can easily view all of the code in order to learn more about it.  I try to use clear commenting to explain the code.
+##Learn / Adopt / Fork## The entirety of the plugin is included in this repository, including the demo section.  You can easily view all of the code in order to learn more about it.  I try to use clear commenting to explain the code.
 
 Also, feel free to adopt and adapt to make it your own.  If you like, fork it and send over a pull request.  Add or solve existing issues.  It is open-source, after all.
