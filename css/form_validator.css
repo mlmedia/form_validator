@@ -1,0 +1,126 @@
+/* some common styles for the form elements */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="search"],
+select {
+	-o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+	-webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+	background-color: #fff;
+	background-image: none;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+	color: #555;
+	display: block;
+	height: 38px;
+	line-height: 1.42857143;
+	padding: 8px 12px;
+	transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+	width: 100%;
+}
+
+.btn {
+	-moz-box-shadow: inset 0 1px 0 0 #c1ed9c;
+	-webkit-box-shadow: inset 0 1px 0 0 #c1ed9c;
+	background: 0;
+	background-color: #9dce2c;
+	border: 1px solid #83c41a;
+	box-shadow: inset 0 1px 0 0 #c1ed9c;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#9dce2c', endColorstr='#8cb82b');
+	font-family: Arial;
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 700;
+	height: 50px;
+	line-height: 50px;
+	padding: 0 2em;
+	text-align: center;
+	text-decoration: none;
+	text-indent: 0;
+	text-shadow: 1px 1px 0 #689324;
+}
+.btn:hover {
+	background: 0;
+	background-color: #8cb82b;
+	filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#8cb82b', endColorstr='#9dce2c');
+}
+.btn:active {
+	position: relative;
+	top: 1px;
+}
+input[type="text"], input[type="password"], input[type="email"], input[type="tel"], input[type="search"], select, textarea {
+	-o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+	-webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+	background-color: #f6f6f6;
+	background-image: none;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+	color: #555;
+	display: block;
+	font-size: 1em;
+	line-height: 1.42857143;
+	padding: 8px 12px;
+	transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+	width: 100%;
+}
+textarea {
+	resize: vertical;
+	max-width: 100%;
+}
+input[type="text"], input[type="password"], input[type="email"], input[type="tel"], input[type="search"], select {
+	height: 38px;
+}
+input[type="submit"] {
+	cursor: pointer;
+}
+.checkbox label {
+	cursor: pointer;
+}
+.form-wrap {
+	background-color: 1em;
+}
+.field-group {
+	margin: 1em 0 1.4em;
+}
+.field {
+	margin: 0;
+}
+
+/* form demo #1 */
+.error-container {
+	color: #ff0000;
+}
+.error-field input[type="text"],
+.error-field input[type="password"],
+.error-field input[type="email"],
+.error-field input[type="tel"],
+.error-field input[type="search"],
+.error-field select,
+.error-field textarea {
+	border-color: #ff0000;
+	background-color: #ffffcc;
+}
+
+/* mobile */
+@media (max-width:979px) {
+
+}
+@media (max-width:767px) {
+	.field {
+		width: 100%;
+	}
+}
+@media (max-width:500px) {
+	.btn {
+		display: block;
+		width: auto;
+	}
+}

@@ -37,7 +37,7 @@ The HTML markup must be a standard `<form>` element, which can use any ID or cla
 An example of the form markup is shown below:
 
 ```html
-<form id="my_form" action="thanks.html" method="post">
+<form id="my_form" action="#" method="post">
     <div class="error-container"><!-- displays all error messages in the form via JS --></div>
     <div class="field-group">
         <div class="field">
