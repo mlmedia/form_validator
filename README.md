@@ -38,7 +38,7 @@ An example of the form markup is shown below:
 
 ```html
 <form id="my_form" action="#" method="post">
-    <div class="error-container"><!-- displays all error messages in the form via JS --></div>
+    <div class="all-errors-container"><!-- displays all error messages in the form via JS --></div>
     <div class="field-group">
         <div class="field">
             <label>Text field (required)</label>

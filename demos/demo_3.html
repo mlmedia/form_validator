@@ -8,6 +8,7 @@
 
 	<!-- css -->
 	<link type="text/css" media="all" href="../css/main.css" rel="stylesheet" />
+	<link type="text/css" media="all" href="../css/form_validator.css" rel="stylesheet" />
 
 	<!-- js -->
     <script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
@@ -28,8 +29,8 @@
 			</p>
 			<hr />
 			<form id="my-form" action="thanks.html" method="post">
-				<div class="all-errors-container"><!-- displays all error messages in the form via JS --></div>
 				<div class="field-group">
+					<div class="error-container"><!-- displays individual error message for this field group --></div>
 					<div class="field">
 						<label>Text field (required)</label>
 						<input type="text" name="text_field" value="" placeholder="Text field (required)"
@@ -37,6 +38,7 @@
 					</div>
 				</div>
 				<div class="field-group">
+					<div class="error-container"><!-- displays individual error message for this field group --></div>
 					<div class="field">
 						<label>Text field (required)</label>
 						<input type="text" name="text_field_2" value="" placeholder="Text field (required)"
@@ -44,6 +46,7 @@
 					</div>
 				</div>
 				<div class="field-group">
+					<div class="error-container"><!-- displays individual error message for this field group --></div>
 					<div class="field">
 						<label>Alpha-numeric field (required)</label>
 						<input type="text" name="alphanumeric_field" value="" placeholder="Alpha-numeric field (required)"
@@ -51,6 +54,7 @@
 					</div>
 				</div>
 				<div class="field-group">
+					<div class="error-container"><!-- displays individual error message for this field group --></div>
 					<div class="field">
 						<label>Email field (required)</label>
 						<input type="text" name="email_field" value="" placeholder="Email field (required)"
@@ -59,6 +63,7 @@
 					</div>
 				</div>
 				<div class="field-group">
+					<div class="error-container"><!-- displays individual error message for this field group --></div>
 					<div class="field">
 						<label>Textarea (required)</label>
 						<textarea type="text" name="textarea_field" rows="5" placeholder="Textarea field"

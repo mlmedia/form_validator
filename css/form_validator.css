@@ -95,6 +95,9 @@ input[type="submit"] {
 }
 
 /* form demo #1 */
+.all-errors-container {
+	color: #ff0000;
+}
 .error-container {
 	color: #ff0000;
 }

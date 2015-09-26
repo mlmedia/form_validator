@@ -15,7 +15,7 @@
 			e.preventDefault();
 
 			/* clear the errors */
-			form.find('.errors').html('');
+			form.find('.all-errors-container').html('');
 			form.find('.error-container').html('');
 			form.find('.error-field').removeClass('error-field');
 			var errors = {};
@@ -102,12 +102,14 @@
 				/* display the errors to error elements + set error classes */
 				$.each(errors, function(key, value) {
 					if (form.find('*[name=' + key + ']').length !== 0) {
-						var field_group = form.find('*[name=' + key + ']').parents('.field-group'); /* field group is used instead of field for compound fields */
+
+						/* field group is used instead of field for compound fields */
+						var field_group = form.find('*[name=' + key + ']').parents('.field-group');
 						field_group.find('.error-container').html(value);
 						field_group.addClass('error-field');
 
 						/* displays all errors into the error-container - if desired */
-						$('.error-container').append(value + '<br />');
+						$('.all-errors-container').append(value + '<br />');
 					}
 				});
 
