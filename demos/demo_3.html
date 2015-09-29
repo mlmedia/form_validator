@@ -65,6 +65,24 @@
 				<div class="field-group">
 					<div class="error-container"><!-- displays individual error message for this field group --></div>
 					<div class="field">
+						<label>URL field (required)</label>
+						<input type="text" name="url_field" value="" placeholder="URL field (required)" data-required-error="URL field required" data-url-error="Enter a valid URL" />
+					</div>
+				</div>
+				<div class="field-group">
+					<div class="error-container"><!-- displays individual error message for this field group --></div>
+					<div class="field split">
+						<label>Matching field #1</label>
+						<input type="text" name="match_field_1" value="" placeholder="Matching field #1" />
+					</div>
+					<div class="field split">
+						<label>Matching field #2</label>
+						<input type="text" name="match_field_2" value="" placeholder="Matching field #2" data-required-error="Matching fields required" data-match="match_field_1" data-match-error="Fields do not match" />
+					</div>
+				</div>
+				<div class="field-group">
+					<div class="error-container"><!-- displays individual error message for this field group --></div>
+					<div class="field">
 						<label>Textarea (required)</label>
 						<textarea type="text" name="textarea_field" rows="5" placeholder="Textarea field"
 						data-required-error="Textarea field required"></textarea>
