@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>jQuery form validator plugin - DEMO #1</title>
+	<title>jQuery form validator plugin - DEMO #2</title>
 
 	<!-- css -->
 	<link type="text/css" media="all" href="../css/main.css" rel="stylesheet" />
 	<link type="text/css" media="all" href="../css/form_validator.css" rel="stylesheet" />
 
 	<!-- js -->
-    <script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
-    <script type="text/javascript" src="../js/form_validator.js"></script>
+	<script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="../js/form_validator.js"></script>
 </head>
+
 <body>
 	<div class="container">
 		<div class="whitebox">
 			<div id="breadcrumbs">
 				&lt;&lt;&nbsp;<a href="../index.html" title="Accordion DEMO index">DEMO index</a>
 			</div>
-			<h1>jQuery form validator plugin - DEMO #1</h1>
+			<h1>jQuery form validator plugin - DEMO #2</h1>
 			<p>
 				Below is a demo of the jQuery form validation plugin from the public GitHub project found here: <a href="https://github.com/mlmedia/form_validator" title="jQuery form validator plugin on GitHub" target="_blank">https://github.com/mlmedia/form_validator</a>.
 			</p>
@@ -29,34 +31,43 @@
 			</p>
 			<hr />
 			<form id="my-form" action="thanks.html" method="post">
-				<div class="all-errors-container"><!-- displays all error messages in the form via JS --></div>
+				<div class="all-errors-container">
+					<!-- displays all error messages in the form via JS -->
+				</div>
 				<div class="field-group">
 					<div class="field">
 						<label>Text field (required)</label>
-						<input type="text" name="text_field" value="" placeholder="Text field (required)"
-						data-required-error="Text field required">
+						<input type="text" name="text_field" value="" placeholder="Text field (required)" data-required-error="Text field required">
 					</div>
 				</div>
 				<div class="field-group">
 					<div class="field">
 						<label>Text field (required)</label>
-						<input type="text" name="text_field_2" value="" placeholder="Text field (required)"
-						data-required-error="Here's another field required error message!">
+						<input type="text" name="text_field_2" value="" placeholder="Text field (required)" data-required-error="Here's another field required error message!">
 					</div>
 				</div>
 				<div class="field-group">
 					<div class="field">
-						<label>Alpha-numeric field (required)</label>
-						<input type="text" name="alphanumeric_field" value="" placeholder="Alpha-numeric field (required)"
-						data-required-error="Alpha-numeric field required">
+						<label>Alpha-numeric field (no special characters)</label>
+						<input type="text" name="alphanumeric_field" value="" placeholder="Alpha-numeric field (no special characters)" data-alphanumeric-error="Alpha-numeric field must be a alpha-numeric">
+					</div>
+				</div>
+				<div class="field-group">
+					<div class="field">
+						<label>Alpha field (A-Z only)</label>
+						<input type="text" name="alpha_field" value="" placeholder="Alpha field (A-Z only)" data-alpha-error="Alpha field must be alphabetical characters only">
+					</div>
+				</div>
+				<div class="field-group">
+					<div class="field">
+						<label>Numeric field</label>
+						<input type="text" name="numeric_field" value="" placeholder="Numeric field" data-numeric-error="Numeric field must be a number">
 					</div>
 				</div>
 				<div class="field-group">
 					<div class="field">
 						<label>Email field (required)</label>
-						<input type="text" name="email_field" value="" placeholder="Email field (required)"
-						data-required-error="Email required"
-						data-email-error="Valid email required">
+						<input type="text" name="email_field" value="" placeholder="Email field (required)" data-required-error="Email required" data-email-error="Valid email required">
 					</div>
 				</div>
 				<div class="field-group">
@@ -66,21 +77,29 @@
 					</div>
 				</div>
 				<div class="field-group">
-					<div class="error-container"><!-- displays individual error message for this field group --></div>
-					<div class="field split">
-						<label>Matching field #1</label>
-						<input type="text" name="match_field_1" value="" placeholder="Matching field #1" />
+					<div class="field split first">
+						<label>Matching field #1 (required)</label>
+						<input type="text" name="match_field_1" value="" placeholder="Matching field #1 (required)" data-required-error="Matching fields required" />
 					</div>
 					<div class="field split">
-						<label>Matching field #2</label>
-						<input type="text" name="match_field_2" value="" placeholder="Matching field #2" data-required-error="Matching fields required" data-match="match_field_1" data-match-error="Fields do not match" />
+						<label>Matching field #2 (required)</label>
+						<input type="text" name="match_field_2" value="" placeholder="Matching field #2 (required)" data-required-error="Matching fields required" data-match="match_field_1" data-match-error="Matching fields #1 and #2 do not match" />
+					</div>
+				</div>
+				<div class="field-group">
+					<div class="field split first">
+						<label>Matching password #1 (required)</label>
+						<input type="password" name="match_password_1" value="" placeholder="Matching password #1 (required)" data-required-error="Matching passwords required" />
+					</div>
+					<div class="field split">
+						<label>Matching password #2 (required)</label>
+						<input type="password" name="match_password_2" value="" placeholder="Matching password #2 (required)" data-required-error="Matching passwords required" data-match="match_password_1" data-match-error="Matching passwords #1 and #2 do not match" />
 					</div>
 				</div>
 				<div class="field-group">
 					<div class="field">
 						<label>Textarea (required)</label>
-						<textarea type="text" name="textarea_field" rows="5" placeholder="Textarea field"
-						data-required-error="Textarea field required"></textarea>
+						<textarea type="text" name="textarea_field" rows="5" placeholder="Textarea field" data-required-error="Textarea field required"></textarea>
 					</div>
 				</div>
 				<div class="field">
@@ -89,17 +108,16 @@
 			</form>
 			<script type="text/javascript">
 				/* define $ as jQuery just in case */
-				( function( $ )
-				{
+				(function($) {
 					/* doc ready */
-					$( function( )
-					{
+					$(function() {
 						/* init the plugin */
-						$( '#my-form' ).validate( );
+						$('#my-form').validate();
 					});
-				})( jQuery );
+				})(jQuery);
 			</script>
 		</div>
 	</div>
 </body>
+
 </html>

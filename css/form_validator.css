@@ -89,9 +89,21 @@ input[type="submit"] {
 }
 .field-group {
 	margin: 1em 0 1.4em;
+	overflow:hidden;
 }
 .field {
 	margin: 0;
+}
+
+.field.split {
+	width:50%;
+	margin:0;
+	float:left;
+	display:inline;
+}
+
+.field.split.first {
+	padding-right:1em;
 }
 
 /* form demo #1 */
