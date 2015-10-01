@@ -43,7 +43,8 @@
 				<div class="field-group">
 					<div class="field">
 						<label>Text field (required)</label>
-						<input type="text" name="text_field_2" value="" placeholder="Text field (required)" data-required-error="Here's another field required error message!">
+						<input type="text" name="text_field_2" value="" placeholder="Text field (required)"
+						data-required-error="Here's another field required error message! (It was added directly as an attribute on the input element)">
 					</div>
 				</div>
 				<div class="field-group">
@@ -62,6 +63,26 @@
 					<div class="field">
 						<label>Numeric field</label>
 						<input type="text" name="numeric_field" value="" placeholder="Numeric field" data-numeric-error="Numeric field must be a number">
+					</div>
+				</div>
+				<div class="field-group">
+					<div class="field">
+						<label>Float field (e.g. 3.1415926)</label>
+						<input type="text" name="float_field" value="" placeholder="Float field" data-float-error="Float field must be a float (e.g. 3.1415926) or a whole number (e.g. 123)">
+					</div>
+				</div>
+				<div class="field-group">
+					<div class="field third first">
+						<label>Grouped field #1</label>
+						<input type="text" name="grouped_field_1" value="" placeholder="Grouped field #1" data-required-error="Grouped field #1 required" />
+					</div>
+					<div class="field third">
+						<label>Grouped field #2</label>
+						<input type="text" name="grouped_field_2" value="" placeholder="Grouped field #2" data-required-error="Grouped field #2 required" />
+					</div>
+					<div class="field third">
+						<label>Grouped field #3</label>
+						<input type="text" name="grouped_field_3" value="" placeholder="Grouped field #3" data-required-error="Grouped field #3 required" />
 					</div>
 				</div>
 				<div class="field-group">

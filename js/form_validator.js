@@ -172,6 +172,15 @@
             return false;
         }
 
+        /* check for float (or whole number OK too) */
+        function is_float(string) {
+            var regex = /^-?\d*(\.\d+)?$/;
+            if (regex.test(string) === true) {
+                return true;
+            }
+            return false;
+        }
+
         /* check for valid email address */
         function is_valid_email(email) {
             var email_regex = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
