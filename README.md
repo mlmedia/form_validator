@@ -12,10 +12,11 @@ Usage of this carousel plugin entails the usual process:
 5. add the custom attributes to the form input elements as described below
 
 ###HTML###
+The following steps describe how to use the form validation.
 
-The HTML markup must be a standard `<form>` element, which can use any ID or class for initialization.
-1. add "validate_this_form" class to the button, anchor, or other element that submits the form
-- add the following custom attributes to the input / textarea elements:
+1. Set up your form HTML.  The markup must use a standard `<form>` element, which can use any ID or class for initialization.
+2. Set up your fields wrapped in a container element using a "form-group" class.  This contains inline errors inside a single container element, which can be useful for compound form fields.
+3. Add the following custom attributes to any of the form elements input, select, or textarea with the text of your choice for the error. If a form element does not contain the following attributes, no error will be shown for that field.
   - "data-required-error" - error message thrown if the field is required
   - "data-match-error" - error message thrown if a field doesn't match it's counterpart field
   - "data-match" - name attribute of the counterpart field to match
@@ -32,7 +33,7 @@ The HTML markup must be a standard `<form>` element, which can use any ID or cla
   - "data-counterpart-error" - error thrown to a counterpart field (e.g. confirm password)
   - "data-counterpart" - name attribute of the counterpart field to throw the error (e.g. password)
 
-- error messages are thrown to "error-container" element within the respective "field-group" element and "errors" container
+4. Include an "error-container" element within the respective "field-group" element in order to display inline errors for any of the fields within that field group.  Add an an element with an "all-errors-container" class in order to display and contain all of the errors of the form.
 
 An example of the form markup is shown below:
 
