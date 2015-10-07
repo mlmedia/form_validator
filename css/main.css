@@ -43,7 +43,6 @@ hr {
 	padding: 1em;
 	width: 960px;
 }
-
 .whitebox {
 	-moz-border-radius: .4em;
 	-moz-box-shadow: 0 0 .5em #ccc;
@@ -60,15 +59,13 @@ hr {
 
 /* mobile */
 
+
 /* mobile */
+
 @media (max-width:979px) {
 	.container {
 		width: 100%;
 	}
 }
-@media (max-width:767px) {
-
-}
-@media (max-width:500px) {
-
-}
+@media (max-width:767px) {}
+@media (max-width:500px) {}
