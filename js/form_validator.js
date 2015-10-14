@@ -1,5 +1,7 @@
 /**
  * Form validator using custom attributes for error messages
+ * TODO: fix this - it appears to crash when many fields are in the form
+ * - was getting a "Uncaught RangeError: Maximum call stack size exceeded" on form with too many checkboxes
  */
 /* define $ as jQuery just in case */
 (function($) {
