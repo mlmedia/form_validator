@@ -20,6 +20,9 @@
 			form.find('.error-field').removeClass('error-field');
 			var errors = {};
 
+			/* set the common vars */
+			var form_fields = form.serializeArray();
+
 			/**
 			 * check standard validations
 			 * go in reverse order of priority
@@ -27,7 +30,7 @@
 			 * so that it takes over the value of the errors[field.name] and the
 			 * lower priority errors do not get displayed at the same time
 			 */
-			$.each(form.serializeArray(), function(i, field) {
+			$.each(form_fields, function(i, field) {
 				var form_input = form.find('*[name=' + field.name + ' ]');
 				if (form_input.attr('data-match-error') !== undefined && form_input.attr('data-match') !== undefined) {
 					var match_field = form_input.attr('data-match');
@@ -119,7 +122,7 @@
 				}, 500);
 
 				/* clear the password fields */
-				$.each(form.serializeArray(), function(i, field) {
+				$.each(form_fields, function(i, field) {
 					var form_input = form.find('*[name=' + field.name + ' ]');
 					if (form_input.attr('type') === 'password') {
 						form_input.val('');
