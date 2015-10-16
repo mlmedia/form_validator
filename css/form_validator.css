@@ -127,6 +127,22 @@ input[type="submit"] {
 	.field {
 		width: 100%;
 	}
+	.field.split {
+		width:100%;
+		float: none;
+		display: block;
+		padding-bottom:1em;
+	}
+	.field.split.first {
+		padding-right: 0;
+	}
+	.field.third {
+		width:100%;
+		float: none;
+		display: block;
+		padding-left: 0;
+		padding-bottom:1em;
+	}
 }
 @media (max-width:500px) {
 	.btn {
