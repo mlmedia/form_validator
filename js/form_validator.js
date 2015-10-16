@@ -1,6 +1,6 @@
 /**
- * $form validator using custom attributes for error messages
- * TODO: fix this - it appears to crash when many fields are in the $form
+ * form validator using custom attributes for error messages
+ * TODO: fix this - it appears to crash when many fields are in the form
  * - was getting a "Uncaught RangeError: Maximum call stack size exceeded" on $form with too many checkboxes
  */
 /* define $ as jQuery just in case */
@@ -13,7 +13,7 @@
 		/* navigation */
 		$form.submit(function(e) {
 
-			/* prevent $form submission (default response) */
+			/* prevent form submission (default response) */
 			e.preventDefault();
 
 			/* clear the $errors */
@@ -100,9 +100,9 @@
 			if (!$.isEmptyObject($errors)) {
 				/* set the $counterpart $errors */
 				$.each($errors, function(key, value) {
-					if ($form.find('*[name=' + key + ']').attr('data-$counterpart') !== undefined) {
-						var $cp_message = $form.find('*[name=' + key + ' ]').attr('data-$counterpart-error') !== undefined ? $form.find('*[name=' + key + ' ]').attr('data-$counterpart-error') : '&nbsp;';
-						var $counterpart = $form.find('*[name=' + key + ' ]').attr('data-$counterpart');
+					if ($form.find('*[name=' + key + ']').attr('data-counterpart') !== undefined) {
+						var $cp_message = $form.find('*[name=' + key + ' ]').attr('data-counterpart-error') !== undefined ? $form.find('*[name=' + key + ' ]').attr('data-counterpart-error') : '&nbsp;';
+						var $counterpart = $form.find('*[name=' + key + ' ]').attr('data-counterpart');
 						$errors[$counterpart] = !$errors[$counterpart] ? $cp_message : $errors[$counterpart];
 					}
 				});
