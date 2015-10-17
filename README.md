@@ -16,7 +16,8 @@ The following steps describe how to use the form validation.
 
 1. Set up your form HTML.  The markup must use a standard `<form>` element, which can use any ID or class for initialization.
 2. Set up your fields wrapped in a container element using a "form-group" class.  This contains inline errors inside a single container element, which can be useful for compound form fields.
-3. Add the following custom attributes to any of the form elements input, select, or textarea with the text of your choice for the error. If a form element does not contain the following attributes, no error will be shown for that field.
+3. Add a "validate-trigger" class to any element to trigger the form validation on click (e.g. on the `<button type="submit">` element).  We use a class in order to allow for multi-part forms with multiple validation levels.
+4. Add the following custom attributes to any of the form elements input, select, or textarea with the text of your choice for the error. If a form element does not contain the following attributes, no error will be shown for that field.
   - "data-required-error" - error message thrown if the field is required
   - "data-match-error" - error message thrown if a field doesn't match it's counterpart field
   - "data-match" - name attribute of the counterpart field to match
@@ -33,35 +34,35 @@ The following steps describe how to use the form validation.
   - "data-counterpart-error" - error thrown to a counterpart field (e.g. confirm password)
   - "data-counterpart" - name attribute of the counterpart field to throw the error (e.g. password)
 
-4. Include an "error-container" element within the respective "field-group" element in order to display inline errors for any of the fields within that field group.  Add an an element with an "all-errors-container" class in order to display and contain all of the errors of the form.
+5. Include an "error-container" element within the respective "form-group" element in order to display inline errors for any of the fields within that field group.  Add an an element with an "all-errors-container" class in order to display and contain all of the errors of the form.
 
 An example of the form markup is shown below:
 
 ```html
 <form id="my_form" action="#" method="post">
     <div class="all-errors-container"><!-- displays all error messages in the form via JS --></div>
-    <div class="field-group">
+    <div class="form-group">
         <div class="field">
             <label>Text field (required)</label>
             <input type="text" name="text_field" value="" placeholder="Text field (required)"
             data-required-error="Text field required">
         </div>
     </div>
-    <div class="field-group">
+    <div class="form-group">
         <div class="field">
             <label>Text field (required)</label>
             <input type="text" name="text_field_2" value="" placeholder="Text field (required)"
             data-required-error="Here's another field required error message!">
         </div>
     </div>
-    <div class="field-group">
+    <div class="form-group">
         <div class="field">
             <label>Alpha-numeric field (required)</label>
             <input type="text" name="alphanumeric_field" value="" placeholder="Alpha-numeric field (required)"
             data-required-error="Alpha-numeric field required">
         </div>
     </div>
-    <div class="field-group">
+    <div class="form-group">
         <div class="field">
             <label>Email field (required)</label>
             <input type="text" name="email_field" value="" placeholder="Email field (required)"
@@ -69,7 +70,7 @@ An example of the form markup is shown below:
             data-email-error="Valid email required">
         </div>
     </div>
-    <div class="field-group">
+    <div class="form-group">
         <div class="field">
             <label>Textarea (required)</label>
             <textarea type="text" name="textarea_field" rows="5" placeholder="Textarea field"

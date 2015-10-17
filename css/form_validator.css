@@ -82,7 +82,7 @@ input[type="submit"] {
 .form-wrap {
 	background-color: 1em;
 }
-.field-group {
+.form-group {
 	margin: 1em 0;
 	overflow: hidden;
 }

@@ -1,17 +1,17 @@
 /**
  * form validator using custom attributes for error messages
  * TODO: fix this - it appears to crash when many fields are in the form
- * - was getting a "Uncaught RangeError: Maximum call stack size exceeded" on $form with too many checkboxes
+ * - was getting a "Uncaught RangeError: Maximum call stack size exceeded" on form with too many checkboxes
  */
 /* define $ as jQuery just in case */
 (function($) {
 	/* circular carousel - my custom plugin */
 	$.fn.validate = function() {
 		/* set static vars */
-		var $form = this;
+		var $form = this
 
-		/* navigation */
-		$form.submit(function(e) {
+		/* on form submit (we use this method because the submit() method called a Maximum stack error) */
+		$form.on('click', '.validate-trigger', function(e) {
 
 			/* prevent form submission (default response) */
 			e.preventDefault();
@@ -91,7 +91,6 @@
 						}
 					}
 				}
-
 			});
 
 			/**
@@ -101,7 +100,7 @@
 				/* set the $counterpart $errors */
 				$.each($errors, function(key, value) {
 					if ($form.find('*[name=' + key + ']').attr('data-counterpart') !== undefined) {
-						var $cp_message = $form.find('*[name=' + key + ' ]').attr('data-counterpart-error') !== undefined ? $form.find('*[name=' + key + ' ]').attr('data-counterpart-error') : '&nbsp;';
+						var $cp_message = $form.find('*[name=' + key + ' ]').attr('data-counterpart-error') !== undefined ? $form.find('*[name=' + key + ']').attr('data-counterpart-error') : '&nbsp;';
 						var $counterpart = $form.find('*[name=' + key + ' ]').attr('data-counterpart');
 						$errors[$counterpart] = !$errors[$counterpart] ? $cp_message : $errors[$counterpart];
 					}
@@ -112,18 +111,18 @@
 					if ($form.find('*[name=' + key + ']').length !== 0) {
 
 						/* field group is used instead of field for compound fields */
-						var $field_group = $form.find('*[name=' + key + ']').parents('.field-group');
-						$field_group.find('.error-container').html(value);
-						$field_group.addClass('error-field');
+						var $form_group = $form.find('*[name=' + key + ']').parents('.form-group'); /* coincides w/ Bootstrap */
+						$form_group.find('.error-container').html(value);
+						$form_group.addClass('error-field');
 
 						/* displays all $errors into the error-container - if desired */
 						$('.all-errors-container').append(value + '<br />');
 					}
 				});
 
-				/* scroll to the top of the $form */
+				/* scroll to the top of the form with a little extra room */
 				$('html, body').animate({
-					scrollTop: $($form).offset().top
+					scrollTop: $($form).offset().top - 50
 				}, 500);
 
 				/* clear the password fields */
@@ -197,6 +196,5 @@
 			}
 			return false;
 		}
-
 	}
 })(jQuery);
