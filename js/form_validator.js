@@ -8,7 +8,7 @@
 	/* circular carousel - my custom plugin */
 	$.fn.validate = function() {
 		/* set static vars */
-		var $form = this
+		var $form = this;
 
 		/* on form submit (we use this method because the submit() method called a Maximum stack error) */
 		$form.on('click', '.validate-trigger', function(e) {
