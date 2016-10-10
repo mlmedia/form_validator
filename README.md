@@ -4,7 +4,7 @@ This jQuery plugin is a form validator that allows the user to add error message
 
 ##Usage / Installation##
 
-Usage of this carousel plugin entails the usual process:
+Usage of this validation plugin entails the usual process:
 1. create the HTML markup
 2. add the JavaScript / jQuery refs
 3. initialize the plugin with any available options
