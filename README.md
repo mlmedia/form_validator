@@ -1,4 +1,4 @@
-# jQuery form validator
+# Form validator plugin (jQuery)
 
 This jQuery plugin is a form validator that allows the user to add error messages directly to the form input element as custom attributes.
 

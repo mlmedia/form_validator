@@ -47,3 +47,6 @@ __MACOSX
 ### Package / dependency managers
 node_modules
 bower_components
+
+### Config files with sensitive data
+.env
