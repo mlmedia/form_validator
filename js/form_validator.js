@@ -4,14 +4,14 @@
  * - was getting a "Uncaught RangeError: Maximum call stack size exceeded" on form with too many checkboxes
  */
 /* define $ as jQuery just in case */
-(function($) {
+(function ($) {
 	/* circular carousel - my custom plugin */
-	$.fn.validate = function() {
+	$.fn.validate = function () {
 		/* set static vars */
 		var $form = this;
 
 		/* on form submit (we use this method because the submit() method called a Maximum stack error) */
-		$form.on('click', '.validate-trigger', function(e) {
+		$form.on('click', '.validate-trigger', function (e) {
 
 			/* prevent form submission (default response) */
 			e.preventDefault();
@@ -32,7 +32,7 @@
 			 * so that it takes over the value of the $errors[field.name] and the
 			 * lower priority $errors do not get displayed at the same time
 			 */
-			$.each($form_fields, function(i, field) {
+			$.each($form_fields, function (i, field) {
 				var $form_input = $form.find('*[name=' + field.name + ' ]');
 				/* we don't validate checkboxes or radios */
 				if ($form_input.attr('type') !== 'checkbox' && $form_input.attr('type') !== 'radio') {
@@ -98,7 +98,7 @@
 			 */
 			if (!$.isEmptyObject($errors)) {
 				/* set the $counterpart $errors */
-				$.each($errors, function(key, value) {
+				$.each($errors, function (key, value) {
 					if ($form.find('*[name=' + key + ']').attr('data-counterpart') !== undefined) {
 						var $cp_message = $form.find('*[name=' + key + ' ]').attr('data-counterpart-error') !== undefined ? $form.find('*[name=' + key + ']').attr('data-counterpart-error') : '&nbsp;';
 						var $counterpart = $form.find('*[name=' + key + ' ]').attr('data-counterpart');
@@ -107,7 +107,7 @@
 				});
 
 				/* display the $errors to error elements + set error classes */
-				$.each($errors, function(key, value) {
+				$.each($errors, function (key, value) {
 					if ($form.find('*[name=' + key + ']').length !== 0) {
 
 						/* field group is used instead of field for compound fields */
@@ -126,7 +126,7 @@
 				}, 500);
 
 				/* clear the password fields */
-				$.each($form_fields, function(i, field) {
+				$.each($form_fields, function (i, field) {
 					var $form_input = $form.find('*[name=' + field.name + ' ]');
 					if ($form_input.attr('type') === 'password') {
 						$form_input.val('');
