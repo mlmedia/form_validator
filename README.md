@@ -85,7 +85,7 @@ An example of the form markup is shown below:
 </form>
 ```
 
-###JavaScript / jQuery###
+### JavaScript / jQuery
 
 Since this plugin utilizes jQuery, we must call it before we can initialize the plugin.  Typically, jQuery will go in the <HEAD> of your HTML document.  You can use a self-hosted copy of it or use one of several CDN hosted versions.  
 
@@ -108,7 +108,7 @@ Anywhere under the jQuery ref, add the ref to the plugin.  This can be added in 
 <!-- path to your JS folder -->
 ```
 
-###Initialize the plugin###
+### Initialize the plugin
 Initialize the plugin with the selector of the parent element.
 
 ```javascript
